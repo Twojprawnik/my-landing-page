@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТВІЙ ПРАВНИК</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+    <header>
+        <img src="images/logo.png" alt="ТВІЙ ПРАВНИК"> <!-- Замените на свой логотип -->
+        <nav>
+            <button onclick="changeLanguage('uk')">🇺🇦 Українська</button>
+            <button onclick="changeLanguage('ru')">🇷🇺 Русский</button>
+            <button onclick="changeLanguage('en')">🇬🇧 English</button>
+            <button onclick="changeLanguage('pl')">🇵🇱 Polski</button>
+        </nav>
+    </header>
+
+    <!-- Главный блок -->
+    <section id="home">
+        <h1 class="lang uk">Міжнародний Офіс Юридичної Допомоги "ТВІЙ ПРАВНИК"</h1>
+        <h1 class="lang ru" style="display: none;">Международный Офис Юридической Помощи "ТВОЙ ПРАВНИК"</h1>
+        <h1 class="lang en" style="display: none;">International Legal Assistance Office "YOUR LAWYER"</h1>
+        <h1 class="lang pl" style="display: none;">Międzynarodowe Biuro Pomocy Prawnej "TWÓJ PRAWNIK"</h1>
+
+        <p class="lang uk">Офіси розташовані в різних країнах ЄС, головний офіс — в Україні.</p>
+        <p class="lang ru" style="display: none;">Офисы расположены в разных странах ЕС, главный офис — в Украине.</p>
+        <p class="lang en" style="display: none;">Offices are located in various EU countries, the main office is in Ukraine.</p>
+        <p class="lang pl" style="display: none;">Biura znajdują się w różnych krajach UE, główne biuro znajduje się na Ukrainie.</p>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services">
+        <h2 class="lang uk">Наші послуги</h2>
+        <h2 class="lang ru" style="display: none;">Наши услуги</h2>
+        <h2 class="lang en" style="display: none;">Our Services</h2>
+        <h2 class="lang pl" style="display: none;">Nasze usługi</h2>
+
+        <ul class="lang uk">
+            <li>Міжнародне право</li>
+            <li>Міграційне право</li>
+            <li>Карне право</li>
+            <li>Сімейне право</li>
+        </ul>
+        <ul class="lang ru" style="display: none;">
+            <li>Международное право</li>
+            <li>Миграционное право</li>
+            <li>Уголовное право</li>
+            <li>Семейное право</li>
+        </ul>
+        <ul class="lang en" style="display: none;">
+            <li>International Law</li>
+            <li>Migration Law</li>
+            <li>Criminal Law</li>
+            <li>Family Law</li>
+        </ul>
+        <ul class="lang pl" style="display: none;">
+            <li>Prawo międzynarodowe</li>
+            <li>Prawo migracyjne</li>
+            <li>Prawo karne</li>
+            <li>Prawo rodzinne</li>
+        </ul>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts">
+        <h2 class="lang uk">Контакти</h2>
+        <h2 class="lang ru" style="display: none;">Контакты</h2>
+        <h2 class="lang en" style="display: none;">Contacts</h2>
+        <h2 class="lang pl" style="display: none;">Kontakt</h2>
+
+        <p>📞 +48 123 456 789</p>
+        <p>📧 info@tviypravnyk.com</p>
+        <p>📍 Варшава, Польща</p>
+    </section>
+
+    <script>
+        function changeLanguage(lang) {
+            document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'block');
+        }
+    </script>
+
+</body>
+</html>
